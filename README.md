@@ -1,2 +1,5 @@
 # mysqlsh-plugin
-Install mysqlsh-plugin for manage proxysql-plugin with Mysql8.0 InnoDB Replication
+
+Ansible Role for install mysqlsh-plugins and for manage proxysql-plugin with Mysql8.0 InnoDB Replication
+
+this plugins is developed by <https://github.com/lefred/mysqlshell-plugins>

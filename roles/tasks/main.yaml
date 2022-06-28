@@ -1,0 +1,31 @@
+---
+- name: Create plugins dir
+  file:
+    path: /root/.mysqlsh/plugins/
+    state: directory
+    mode: 0755
+
+- name: Install python module required
+  apt:
+    name:
+    - python3-requests
+    - python3-pyclamd
+    - python3-numpy
+    state: present
+
+- name: Copy mysqlsh plugins in destination folder
+  copy:
+    src: files/
+    dest: /root/.mysqlsh/plugins/
+    mode: '0755'
+
+- name: Copy proxysql.py in your directory
+  template:
+    src: templates/proxysql.py.j2
+    dest: /root/.mysqlsh/plugins/proxysql/proxysql.py
+    mode: '0755'
+  register: proxysql
+
+- name: Change proxysqldb only if proxysql.py is changed
+  shell: mysqlsh --uri root:{{ mysql_root_password }}@{{ mysql_ip }}:3306 -e "proxysql.create('{{  }}:{{ proxysql_remoteadmin_password }}@{{ proxysql_ip }}:6032').configure()"
+  when: proxysql.changed and (inventory_hostname == groups['cluster'][0])

@@ -1,0 +1,4 @@
+[cluster]
+mysql-0 ansible_host=192.168.0.130
+mysql-1 ansible_host=192.168.0.131
+mysql-2 ansible_host=192.168.0.132
