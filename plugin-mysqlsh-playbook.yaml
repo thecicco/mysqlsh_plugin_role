@@ -7,20 +7,4 @@
   gather_facts: true
   roles:
     - role: mysqlsh-plugin-role
-      #general variable for main task
-      mysql_user: "root"
-      mysql_root_password: "password for root user"
-      proxysql_remoteadmin_user: "remoteadmin"
-      proxysql_remoteadmin_password: "password for remoteadmin user"
-      mysql_ip: "192.168.0.130"
-      proxysql_ip: "192.168.0.134"
 
-      # Variables for proxysql plugin
-      max_writers: 1
-      writer_is_also_reader: 1
-      max_transaction_behind: 200
-      use_ssl: 0
-      monitor_user: 'monitor' #Use Always monitor as monitor-user also in proxysql.conf
-      #You can use vault to protect your password
-      #monitor_pwd: "{{ lookup('hashi_vault', 'secret=path/to/secret:name_secret token={{ vault_token }} url=https://vautl.url:8202')}}"
-      monitor_pwd: "Password for monitor user"
