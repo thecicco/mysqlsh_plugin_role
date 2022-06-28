@@ -1,0 +1,3 @@
+galaxy_info:
+  role_name: mysqlsh_plugin_role
+  description: install mysqlsh-plugins and for manage proxysql-plugin with Mysql8.0 InnoDB Replication
