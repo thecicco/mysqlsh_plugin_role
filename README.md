@@ -47,5 +47,5 @@ Run with default vars:
   become_method: sudo
   gather_facts: true
   roles:
-    - role: mysqlsh-plugin-role
+    - role: mysqlsh_plugin_role
 ```
