@@ -27,5 +27,5 @@
   register: proxysql
 
 - name: Change proxysqldb only if proxysql.py is changed
-  shell: mysqlsh --uri root:{{ mysql_root_password }}@{{ mysql_ip }}:3306 -e "proxysql.create('{{  }}:{{ proxysql_remoteadmin_password }}@{{ proxysql_ip }}:6032').configure()"
+  shell: mysqlsh --uri {{ mysql_user }}:{{ mysql_root_password }}@{{ mysql_ip }}:3306 -e "proxysql.create('{{ proxysql_remoteadmin_user }}:{{ proxysql_remoteadmin_password }}@{{ proxysql_ip }}:6032').configure()"
   when: proxysql.changed and (inventory_hostname == groups['cluster'][0])
