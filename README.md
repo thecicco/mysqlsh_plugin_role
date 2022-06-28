@@ -4,6 +4,8 @@
 
 Ansible Role for install mysqlsh-plugins and for manage proxysql-plugin with Mysql8.0 InnoDB Replication
 
+More information on how to integrate proxysql in mysql innodb cluster here:  <https://lefred.be/content/how-to-integrate-proxysql-in-mysql-innodb-cluster/>
+
 these plugins is developed by <https://github.com/lefred/mysqlshell-plugins>
 
 ## Requirements
