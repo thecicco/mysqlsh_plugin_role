@@ -24,6 +24,9 @@ The role defines its variables in `defaults/main.yml`:
 |proxysql_ip|proxysql ip, this can be a VIP if you have 2 proxysql|"192.168.0.134"|
 
 ## Proxysql Varibles for plugin
+
+|VARIABLE|DESCRIPTION|DEFAULT VALUE|
+|--------|-----------|-------------|
 |max_writers|ProxySQL will limit the number of Read-Write instances populated in the writer hostgroup based on the value defined in max_writers for the cluster. Any nodes exceeding this number are placed into the backup_writer_hostgroup and ProxySQL will move these to the writer_hostgroup to actively serve traffic as needed|"1"|
 |writer_is_also_reader|This parameter has three possible values: (0, 1, 2).
 – writer_is_also_reader=0: nodes with `read_only=0` will be placed either in the writer_hostgroup and in the backup_writer_hostgroup after a topology change, these will be excluded from the reader_hostgroup.
