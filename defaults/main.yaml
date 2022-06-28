@@ -6,7 +6,6 @@ proxysql_remoteadmin_user: "remoteadmin"
 proxysql_remoteadmin_password: "password for remoteadmin user"
 mysql_ip: "192.168.0.130"
 proxysql_ip: "192.168.0.134"
-
 # Variables for proxysql plugin
 max_writers: 1
 writer_is_also_reader: 1
