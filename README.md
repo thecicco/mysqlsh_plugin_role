@@ -1,5 +1,7 @@
 # mysqlsh-plugin
 
+[![Galaxy](https://img.shields.io/badge/galaxy-thecicco.ansible--mysqlsh_plugin_role-blue.svg?style=flat-square)](https://galaxy.ansible.com/thecicco/mysqlsh_plugin_role)
+
 Ansible Role for install mysqlsh-plugins and for manage proxysql-plugin with Mysql8.0 InnoDB Replication
 
 these plugins is developed by <https://github.com/lefred/mysqlshell-plugins>
