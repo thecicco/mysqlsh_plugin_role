@@ -6,7 +6,7 @@
   become_method: sudo
   gather_facts: true
   roles:
-    - role: mysqlsh-plugin
+    - role: mysqlsh-plugin-role
       #general variable for main task
       mysql_user: "root"
       mysql_root_password: "password for root user"
